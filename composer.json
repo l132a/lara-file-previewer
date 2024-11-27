@@ -1,19 +1,19 @@
 {
-    "name": "khutachan/lara-file-previewer",
+    "name": "l132a/lara-file-previewer",
     "description": "A streamlined file previewer for Laravel projects.",
     "keywords": [
-        "khutachan",
+        "l132a",
         "lara-file-previewer",
         "file previewer",
         "laravel"
     ],
-    "homepage": "https://github.com/khutachan/lara-file-previewer",
+    "homepage": "https://github.com/l132a/lara-file-previewer",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Khutachan",
-            "email": "your-email@example.com",
+            "name": "l132a",
+            "email": "su2yowidodo@gmail.com",
             "role": "Developer"
         }
     ],
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Khutachan\\LaraFilePreviewer\\": "src"
+            "l132a\\LaraFilePreviewer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Khutachan\\LaraFilePreviewer\\Tests\\": "tests"
+            "l132a\\LaraFilePreviewer\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Khutachan\\LaraFilePreviewer\\LaraFilePreviewerServiceProvider"
+                "l132a\\LaraFilePreviewer\\LaraFilePreviewerServiceProvider"
             ],
             "aliases": {
-                "LaraFilePreviewer": "Khutachan\\LaraFilePreviewer\\LaraFilePreviewerFacade"
+                "LaraFilePreviewer": "l132a\\LaraFilePreviewer\\LaraFilePreviewerFacade"
             }
         }
     }
