@@ -1,6 +1,6 @@
 <?php
 
-namespace Khutachan\LaraFilePreviewer;
+namespace l132a\LaraFilePreviewer;
 
 use Illuminate\Support\ServiceProvider;
 
