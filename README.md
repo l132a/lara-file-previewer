@@ -12,9 +12,8 @@ Lara File Previewer provides the same core features as Laravel File Viewer but w
 
 To use Lara File Previewer, your application must meet the following requirements:
 
--   PHP: ^7.4|^8.0
--   Laravel Framework: ^9.0|^10.0
-
+-   PHP: ^7.4|^8.2
+-   Laravel Framework: ^9.0|^10.0|^11.0
 ## Installation
 
 ## Installation
@@ -27,9 +26,9 @@ To install the package, you need to update your `composer.json` file to include 
 
 ```json
     "repositories": {
-        "khutachan/lara-file-previewer": {
+        "l132a/lara-file-previewer": {
             "type": "git",
-            "url": "https://github.com/khutachan/lara-file-previewer"
+            "url": "https://github.com/l132a/lara-file-previewer"
         }
     }
 ```
@@ -42,7 +41,7 @@ To install the package, you need to update your `composer.json` file to include 
 
 ```json
     "require": {
-        "khutachan/lara-file-previewer": "dev-main"
+        "l132a/lara-file-previewer": "dev-main"
     }
 ```
 
@@ -51,7 +50,7 @@ To install the package, you need to update your `composer.json` file to include 
     After adding the repository and require entries, run the following command to install the package:
 
 ```bash
-    composer update khutachan/lara-file-previewer
+    composer update l132a/lara-file-previewer
 ```
 
 This will install the package from the specified repository and make it available for use in your Laravel application.
@@ -59,7 +58,7 @@ This will install the package from the specified repository and make it availabl
 4. **Publish the package assets**:
 
 ```bash
-    php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="l132a\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=assets
 ```
 
 5. (Optional) **Publish the package views (for UI customization):**
@@ -69,7 +68,7 @@ This will install the package from the specified repository and make it availabl
     **Note:** This has only been tested on Laravel. The compatibility with other frameworks has not been verified.
 
 ```bash
-    php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=views
+    php artisan vendor:publish --provider="l132a\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=views
 ```
 
 ## Usage
@@ -100,7 +99,7 @@ Add the alias to your Laravel configuration:
 
 ```php
     'aliases' => Facade::defaultAliases()->merge([
-        'LaraFilePreviewer' => Khutachan\LaraFilePreviewer\LaraFilePreviewerFacade::class, //This line registers the LaraFilePreviewer facade. Ensure that you place it within the aliases array in config/app.php.
+        'LaraFilePreviewer' => l132a\LaraFilePreviewer\LaraFilePreviewerFacade::class, //This line registers the LaraFilePreviewer facade. Ensure that you place it within the aliases array in config/app.php.
     ])->toArray(),
 ```
 
@@ -117,7 +116,7 @@ Register the alias in your OctoberCMS - WinterCMS plugin:
     {
         public function boot(){
             //Add this line inside boot() method.
-            $this->app->register(\Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider::class);
+            $this->app->register(\l132a\LaraFilePreviewer\LaraFilePreviewerServiceProvider::class);
         }
     }
 ```
